@@ -9,7 +9,7 @@
           "key": "Access-Control-Allow-Origin",
           "value": "*"
         }
-      ],
+      ]
     },
     { "source": "/httpproxy/:match/:url*", "destination": "http://:match/:url*" }
   ]
