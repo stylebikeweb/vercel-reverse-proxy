@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/api/(.*)",
+      "source": "/proxy/(.*)",
       "headers": [
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
         { "key": "Access-Control-Allow-Origin", "value": "*" },
@@ -13,8 +13,11 @@
   "rewrites": [
     { 
       "source": "/proxy/:match/:url*", 
-      "destination": "https://:match/:url*",
+      "destination": "https://:match/:url*"
     },
-    { "source": "/httpproxy/:match/:url*", "destination": "http://:match/:url*" }
+    {
+      "source": "/httpproxy/:match/:url*",
+      "destination": "http://:match/:url*" 
+    }
   ]
 }
