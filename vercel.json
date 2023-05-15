@@ -1,6 +1,16 @@
 {
   "rewrites": [
-    { "source": "/proxy/:match/:url*", "destination": "https://:match/:url*" },
+    { 
+      "source": "/proxy/:match/:url*", 
+      "destination": "https://:match/:url*" 
+      "has": [
+        {
+          "type": "header",
+   				"key": "Access-Control-Allow-Origin",
+   				"value": "*"
+        }
+      ],
+    },
     { "source": "/httpproxy/:match/:url*", "destination": "http://:match/:url*" }
   ]
 }
