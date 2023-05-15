@@ -2,7 +2,7 @@
   "rewrites": [
     { 
       "source": "/proxy/:match/:url*", 
-      "destination": "https://:match/:url*" 
+      "destination": "https://:match/:url*",
       "has": [
         {
           "type": "header",
