@@ -11,6 +11,16 @@
         }
       ],
     },
-    { "source": "/httpproxy/:match/:url*", "destination": "http://:match/:url*" }
+    { 
+      "source": "/httpproxy/:match/:url*", 
+      "destination": "http://:match/:url*" 
+      "has": [
+        {
+          "type": "header",
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ],
+    }
   ]
 }
